@@ -5,7 +5,27 @@
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
 
+@font-face {
+  font-family: 'Pasajero';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/Pasajero.otf');
+}
 
+@font-face {
+  font-family: 'Finition';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/Finition.ttf');
+}
+
+
+@font-face {
+  font-family: 'Old';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/Old.ttf');
+}
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
@@ -34,11 +54,12 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:   black,
+  secondary:  #7f8c8d,
   danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  light:      #34495e ,
+  dark:       #222,
+  azulescuro: #34495e
 );
 
 
