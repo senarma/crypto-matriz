@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
 import { HomePage } from '../home/home';
 
 /**
@@ -15,14 +15,22 @@ import { HomePage } from '../home/home';
   templateUrl: 'intro.html',
 })
 export class IntroPage {
+  @ViewChild(Slides) slides: Slides;
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  goToHome(){
+  public goToHome(){
     
         this.navCtrl.push(HomePage);
       }
+
+  public goToNext(){
+
+    this.slides.slideNext(500);
+    
+  }    
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad IntroPage');

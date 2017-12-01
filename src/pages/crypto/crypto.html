@@ -1,0 +1,135 @@
+<!--
+  Generated template for the CryptoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding>
+  <ion-slides pager>
+    <ion-slide>
+      Para conhecer este metodo utilizaremos a duas matrizes
+      MATRIZ A:  <table align="center">
+          <tr> <th>5</th> <th>7</th> </tr>
+          <tr> <th>2</th> <th>3</th> </tr> 
+          </table>
+
+          MATRIZ B: <table align="center">
+              <tr> <th>3</th> <th>-7</th> </tr>
+              <tr> <th>2</th> <th>5</th> </tr> 
+              </table>
+
+              Podemos observar que a matriz B é a inversa da MATRIZ A.
+              
+              Neste metodo de criptografia, o remetente vai usar a MATRIZ A para criptografar a mensagem e o destinatario vai usar a matriz B para decodificar a mensagem    
+    </ion-slide>
+
+    <ion-slide>
+        O  próximo  passo  é  criar  uma  tabela  de  correspondência  transformando  o  alfabeto  em 
+        números para podermos operar.<br/> Clique no botão e confira o cifrador para o jogo:
+        <ion-row justify-content-center align-items-end>
+          <button ion-button  color="secondary" small (click)="showCifrador()">CIFRADOR</button>
+          </ion-row>
+
+           Vamos agora codificar a palavra MATRIZ usando nossa tabela
+           <table align="center">
+       <tr> <th>M</th>   <th>A</th> <th>T</th>   <th>R</th>  <th>I</th>  <th>Z</th> </tr>
+       <tr> <th>13</th>  <th>1</th>  <th>20</th>  <th>18</th>  <th>9</th>   <th>26</th></tr>
+      </table>
+     <br/>
+       Como a matriz codificadora tem Duas linhas e duas colunas, devemos arranjar  a 
+       sequência de números em uma matriz com duas linhas.
+       <table align="center">
+       <tr><th>13</th> <th>1</th> <th>2</th> </tr>   
+        <tr><th>18</th> <th>9</th> <th>26</th> </tr>
+      </table>
+      Esta é a matriz mensagem.
+       
+    </ion-slide>
+
+
+    <ion-slide>
+        Agora,  para  codificar  a  mensagem,  multiplicamos  a  matriz  mensagem  à  esquerda  pela  matriz A:
+       MATRIZ A: <table align="center">
+          <tr> <th>5</th> <th>7</th> </tr>
+          <tr> <th>2</th> <th>3</th> </tr> 
+          </table>
+          <ion-row justify-content-center align-items-end>
+              
+                      X
+          </ion-row>            
+
+       MATRIZ MENSAGEM :
+       <table align="center">
+          <tr><th>13</th> <th>1</th> <th>2</th> </tr>   
+          <tr><th>18</th> <th>9</th> <th>26</th> </tr>
+      </table>     
+      
+      <ion-row justify-content-center align-items-end>
+          
+                  =
+      </ion-row>  
+         MATRIZ CRIPTOGRAFADA:<table align="center">
+         <tr><th>191</th> <th>68</th> <th>282</th> </tr>   
+         <tr><th>80</th> <th>29</th> <th>118</th> </tr>
+        </table>
+        
+        Simples ne??
+    </ion-slide>
+
+
+
+    <ion-slide>
+         Esta lembrado da MATRIZ INVERSA B? Multiplique pela Matriz Criptografada:
+         <br/>  
+         <ion-row justify-content-center align-items-end>
+            
+         <div>
+         MATRIZ INVERSA: <table align="center">
+            <tr> <th>3</th> <th>-7</th> </tr>
+            <tr> <th>2</th> <th>5</th> </tr> 
+            </table>
+          </div>
+
+                
+                     <div class="sinal">   X
+                      </div>
+                      <div>
+                <table align="center">
+                    <tr><th>191</th> <th>68</th> <th>282</th> </tr>   
+                    <tr><th>80</th> <th>29</th> <th>118</th> </tr>
+                   </table>
+                  </div>
+                  </ion-row>  
+                  
+
+                   <ion-row justify-content-center align-items-end>
+                      
+                              =
+                  </ion-row>                     
+                  
+                  
+                   <table align="center">
+                      <tr><th>13</th> <th>1</th> <th>2</th> </tr>   
+                      <tr><th>18</th> <th>9</th> <th>26</th> </tr>
+                  </table> 
+
+                  Agora e so usar o Cifrador e temos recuperada nossa palavra CRIPTOGRAFADA
+                  
+                  <table align="center">
+                      <tr> <th>M</th>   <th>A</th> <th>T</th>   <th>R</th>  <th>I</th>  <th>Z</th> </tr>
+                      <tr> <th>13</th>  <th>1</th>  <th>20</th>  <th>18</th>  <th>9</th>   <th>26</th></tr>
+                     </table>
+                     <br/><br/>
+                     <button ion-button color="secondary" (click)="goHome()">  <ion-icon name="game-controller-a"></ion-icon>
+                      Continuar</button> 
+
+    </ion-slide>
+
+
+  </ion-slides>
+    
+
+</ion-content>

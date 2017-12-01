@@ -1,21 +1,33 @@
 
 
-<ion-content padding>
+<ion-content class="fundo" padding>
   <div float-right>  
       <button ion-button  color="secondary" small (click)="goToHome()">X</button>
     </div>  
 
   <ion-slides pager>
-      <ion-slide>
-        Crypto Matriz é um jogo educativo com o foco em resolução de problemas utilizando operações com Matrizes e Criptografia
+      <ion-slide class="slide_image" >
+          <img  src="assets/imgs/questao.png" alt="">  
+          <br/>
+          
+        Crypto Matriz é um jogo educativo com o foco em resolução de problemas com Matrizes aplicadas em Criptografia
+        <br/><br/>
         Para a resolução dos problemas voce precisa apenas realizar operações com Matrizes e Matrizes inversas.
+        <ion-row justify-content-center align-items-end>
+            
+        <button ion-button color="secondary" (click)="goToNext()">  <ion-icon name="ios-arrow-dropright-circle-outline"></ion-icon>
+          PROXIMO</button> 
+        </ion-row>
         
       </ion-slide>
 
       <ion-slide>
-          Para a resolução dos problemas voce precisa apenas realizar operações com Matrizes e Matrizes inversas.
+          Para a resolução dos problemas voce precisa apenas realizar operações com Matrizes e Matrizes inversas.<br/>
+          <ion-row justify-content-center align-items-end>
+              
           <button ion-button color="secondary" (click)="goToHome()">  <ion-icon name="game-controller-a"></ion-icon>
             Continuar</button> 
+          </ion-row>
       </ion-slide>
 
 

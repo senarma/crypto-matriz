@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import {MyApp } from './app.component';
 import {HomePage } from '../pages/home/home';
 import {PerguntasPage } from '../pages/perguntas/perguntas'
+import {CryptoPage} from '../pages/crypto/crypto'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,7 +16,8 @@ import { ConfigProvider } from '../providers/config/config';
   declarations: [
     MyApp,
     HomePage,
-    PerguntasPage
+    PerguntasPage,
+    CryptoPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { ConfigProvider } from '../providers/config/config';
   entryComponents: [
     MyApp,
     HomePage,
-    PerguntasPage
+    PerguntasPage,
+    CryptoPage
   ],
   providers: [
     StatusBar,
