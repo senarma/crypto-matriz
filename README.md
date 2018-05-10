@@ -1,3 +1,9 @@
+Jogo educativo com questões sobre criptografia e matrizes.
+Educational game with questions about cryptography and matrix.
+
+Apenas em PT-BR.
+Only on PT-BR.
+
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
 ## How to use this template
